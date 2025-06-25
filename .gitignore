@@ -1,0 +1,15 @@
+# Dependencies (jika suatu saat Anda menggunakan npm/yarn untuk dependensi lain)
+node_modules/
+
+# File konfigurasi yang dihasilkan secara dinamis (berisi API key saat lokal)
+# File ini akan dibuat oleh Vercel saat build menggunakan environment variable
+config.js
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment files (praktik yang baik)
+.env
+.env.*
+!.env.example
