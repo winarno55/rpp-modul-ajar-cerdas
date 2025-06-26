@@ -13,4 +13,3 @@ export const LoadingSpinner: React.FC = () => {
     </div>
   );
 };
-    

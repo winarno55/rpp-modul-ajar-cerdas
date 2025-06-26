@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -132,10 +133,9 @@
     "react/": "https://esm.sh/react@^19.1.0/",
     "react": "https://esm.sh/react@^19.1.0",
     "@google/genai": "https://esm.sh/@google/genai@^1.6.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
-    "@/App": "/App.tsx",
-    "@/utils/markdownUtils": "/utils/markdownUtils.ts",
-    "jspdf": "https://esm.sh/jspdf@^3.0.1"
+    "react-dom/client": "https://esm.sh/react-dom@^19.1.0/client",
+    "jspdf": "https://esm.sh/jspdf@^3.0.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
   }
 }
 </script>
@@ -144,6 +144,7 @@
 <body class="bg-slate-100 text-slate-800">
   <div id="root"></div>
   <script src="/config.js"></script> <!-- Muat konfigurasi API Key -->
-  <script type="module" src="/index.tsx"></script>
+  <script type="module" src="/bundle.js"></script> <!-- Muat bundle aplikasi -->
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>

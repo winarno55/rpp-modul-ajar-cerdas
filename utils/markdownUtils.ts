@@ -1,5 +1,4 @@
 
-
 // Helper to escape HTML special characters
 function escapeHtml(text: string): string {
     return text.replace(/&/g, '&amp;')

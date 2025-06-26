@@ -1,8 +1,9 @@
+
 {
   "name": "rpp-generator-cerdas-vercel",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node generate-env.js"
+    "build": "node generate-env.js && npx esbuild index.tsx --bundle --outfile=bundle.js --format=esm --jsx=automatic --loader:.ts=tsx --resolve-extensions=.tsx,.ts,.js,.jsx --external:react --external:react-dom/client --external:@google/genai --external:jspdf"
   }
 }
