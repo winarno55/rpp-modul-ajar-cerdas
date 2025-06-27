@@ -1,4 +1,3 @@
-
 import { LessonPlanInput } from '../types';
 
 export const generateLessonPlanPrompt = (input: LessonPlanInput): string => {
@@ -111,6 +110,18 @@ E. LAMPIRAN
 
    3. Materi Ajar
       [Sediakan ringkasan singkat materi atau poin-poin kunci dari ${materi} yang akan diajarkan. Ini bukan materi lengkap, tetapi highlight yang bisa membantu guru mengingat inti materi. Bisa juga berupa saran sumber belajar tambahan (misal: tautan video pembelajaran, artikel, atau buku teks yang relevan dengan ${materi} dan Kelas (${kelas})).]
+
+   4. Lembar Evaluasi Individu
+      [Buatlah lembar evaluasi individu yang terpisah dari LKPD. Lembar ini harus berisi 3-4 soal yang secara langsung mengukur ketercapaian Tujuan Pembelajaran yang telah ditetapkan di Bagian B.
+       - Mulai dengan format header standar:
+         Nama          : .............................................
+         Kelas         : .............................................
+         Nomor Absen   : .............................................
+
+         Petunjuk: Jawablah pertanyaan-pertanyaan di bawah ini dengan benar!
+
+       - Buat variasi jenis soal (misalnya, 1-2 Pilihan Ganda dengan opsi A, B, C, D dan 1-2 soal Esai Singkat) yang relevan dengan ${materi} dan sesuai untuk level kognitif siswa Kelas (${kelas}).
+       - Setelah daftar soal, sertakan bagian "KUNCI JAWABAN DAN PEDOMAN PENSKORAN" yang jelas untuk setiap soal. Untuk esai, berikan poin-poin kunci yang diharapkan ada dalam jawaban dan usulan skor untuk setiap soal.]
 
 Pastikan bahasa yang digunakan jelas, lugas, profesional, dan mudah dipahami oleh guru. Seluruh output harus dalam Bahasa Indonesia. Format akhir harus konsisten dan terstruktur dengan baik.
 `;

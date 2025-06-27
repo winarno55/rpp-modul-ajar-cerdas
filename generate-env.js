@@ -1,6 +1,5 @@
-
 const fs = require('fs');
-const path =require('path');
+const path = require('path');
 
 // API_KEY ini akan diambil dari environment variable yang Anda set di Vercel
 const apiKey = process.env.API_KEY;
@@ -13,7 +12,12 @@ if (!apiKey) {
   );
 }
 
-const configContent = `window.APP_CONFIG = { API_KEY: "${apiKey || ''}" };`;
+// Gunakan JSON.stringify untuk memastikan API key di-escape dengan benar
+// dan aman untuk dimasukkan ke dalam file JavaScript.
+const configObject = {
+  API_KEY: apiKey || ''
+};
+const configContent = `window.APP_CONFIG = ${JSON.stringify(configObject)};`;
 
 // Menulis config.js ke direktori root, tempat index.html berada
 const outputPath = path.join(__dirname, 'config.js');
